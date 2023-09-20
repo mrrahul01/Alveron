@@ -11,6 +11,7 @@
                         <img id="logo-header" src="assets/img/LOGO-JPG.jpg" alt="Logo" width="120px">
                     </a>
                 </div>
+                <!-- this is a simple navbar  -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-responsive-collapse">
