@@ -1,0 +1,941 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+<title>Designing Tables with Stylesheets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+<style type="text/css">
+
+body {
+    font-family: Verdana,Arial,sans-serif;
+}
+
+body,p,blockquote,li,th,td {
+    font-size: 10pt;
+}
+
+h1 { font-size: 1.4em; }
+h2 { font-size: 1.1em; margin-top: 2em; margin-bottom: 0.5em; }
+h3 { font-size: 1.0em; font-style: italic; font-weight: normal; margin-top: 2em; margin-bottom: 0.5em; }
+
+code {
+    font-size: 1.1em;
+}
+
+p,blockquote,pre,ul,ol,dl,table {
+    margin-top: 0px;
+    margin-bottom: 1em;
+}
+
+
+/* Design 1 */
+table.Design1 {
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+table.Design1 th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.1em 0.5em;
+    border: 1px solid #666666;
+}
+table.Design1 td {
+    text-align: right;
+    padding: 0.1em 0.5em;
+    border: 1px solid #666666;
+}
+table.Design1 thead th {
+    text-align: center;
+}
+table.Design1 th.Corner {
+    text-align: left;
+}
+
+
+/* Design 2 */
+table.Design2 {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    border: 1px solid #666666;
+}
+table.Design2 th {
+    border-bottom: 1px solid #666666;
+    text-align: left;
+    font-weight: normal;
+    padding: 0.1em 0.5em;
+}
+table.Design2 td {
+    text-align: right;
+    border-bottom: 1px solid #666666;
+    padding: 0.1em 0.5em;
+}
+table.Design2 thead th {
+    background-color: #E5E5E5;
+    text-align: center;
+}
+table.Design2 th.Corner {
+    text-align: left;
+}
+
+
+/* Design 3 */
+table.Design3 {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    background-color: #E5E5E5;
+    border: 10px solid #E5E5E5;
+}
+table.Design3 th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.1em 0.5em;
+}
+table.Design3 td {
+    text-align: right;
+    border-left: 1px solid #666666;
+    padding: 0.1em 0.5em;
+}
+table.Design3 thead th {
+    border-left: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+    text-align: center;
+}
+table.Design3 th.Corner {
+    text-align: left;
+    border-left: 0px;
+}
+
+
+
+/* Design 4 */
+table.Design4 {
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+table.Design4 th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.1em 0.5em;
+    border-bottom: 2px solid #FFFFFF;
+    background: #DBE2F1;
+}
+table.Design4 td {
+    text-align: right;
+    border-bottom: 2px solid #FFFFFF;
+    padding: 0.1em 0.5em;
+    background: #DBE2F1;
+}
+
+table.Design4 thead th {
+    background: #687EAB;
+    color: #FFFFFF;
+    text-align: center;
+}
+table.Design4 th.Corner {
+    text-align: left;
+}
+
+
+
+/* Design 5 */
+table.Design5 {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    border-top: 4px solid #EA9A1C;
+    border-bottom: 1px solid #EA9A1C;
+}
+table.Design5 th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.2em 0.5em;
+    border-top: 1px dotted #EA9A1C;
+}
+table.Design5 td {
+    text-align: right;
+    border-top: 1px dotted #EA9A1C;
+    padding: 0.2em 0.5em;
+}
+table.Design5 thead th {
+    text-align: center;
+    border-bottom: 1px solid #EA9A1C;
+}
+table.Design5 th.Corner {
+    text-align: left;
+}
+
+
+
+
+/* Design 6 */
+table.Design6 {
+    border-spacing: 0px;
+/*    border-collapse: collapse; */
+    background: #E9E9F3;
+    border: 0.5em solid #E9E9F3;
+}
+table.Design6 th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.1em 0.5em;
+    border: 0px;
+    border-bottom: 1px solid #9999AA;
+}
+table.Design6 td {
+    text-align: right;
+    border: 0px;
+    border-bottom: 1px solid #9999AA;
+    border-left: 1px solid #9999AA;
+    padding: 0.1em 0.5em;
+}
+table.Design6 thead th {
+    text-align: center;
+    font-weight: bold;
+    color: #6C6C9A;
+    border-left: 1px solid #9999AA;
+}
+table.Design6 th.Corner {
+    text-align: left;
+    border-left: 0px;
+}
+table.Design6 tr.Odd {
+    background: #F6F4E4;
+}
+
+
+/* Design 7 */
+table.Design7 {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    background: #F9F5D7;
+    border: 0.3em solid #000000;
+}
+table.Design7 th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.1em 0.5em;
+    border: 0px;
+    border-bottom: 1px solid #000000;
+}
+table.Design7 td {
+    text-align: right;
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    padding: 0.1em 0.5em;
+}
+table.Design7 thead th {
+    text-align: center;
+    font-weight: bold;
+    background-color: #AA0000;
+    color: #FFFFFF;
+}
+table.Design7 th.Corner {
+    text-align: left;
+}
+table.Design7 td.Odd {
+    background: #E8E4C0;
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<h1>Styling Tables with CSS</h1>
+
+<p>It is truly sad that IE6 for Windows does <em>not</em> support the
+<code>border-spacing</code> style! Luckily, that browser <em>does</em> at least get
+rid of the cell spacing when you use <code>border-collapse</code>. IE for
+Mac, however, doesn't even do that. So, if you're designing a table and you
+don't want to use <code>border-collapse</code>, you'll need to add the
+
+<code>cellspacing='0'</code> attribute to your table if you want it to work
+in IE for Windows. And you'll always need that attribute if you want it to work
+in IE for Mac.</p>
+
+<p>Versions of Safari before 1.2, unfortunately, do not support the
+<code>border-collapse</code> style. Luckily Safari users will most likely be
+kept up to date, as Safari gets updated with the regular system automatic
+software update</p>
+
+
+
+<h2>Table with no stylesheets applied to it.</h2>
+
+
+<table cellspacing='0'>
+
+<thead>
+<tr>
+<th class="Corner">Browser</th>
+<th>2000</th>
+<th>2001</th>
+<th>2002</th>
+<th>2003</th>
+<th>2004</th>
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<th>MSIE 6.x</th>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>23</td>
+<td>52</td>
+<td>74</td>
+</tr>
+
+<tr>
+
+<th>MSIE 5.x</th>
+<td>45</td>
+<td>72</td>
+<td>64</td>
+<td>39</td>
+<td>18</td>
+</tr>
+
+<tr>
+<th>MSIE 4.x</th>
+
+<td>30</td>
+<td>12</td>
+<td>4</td>
+<td>1</td>
+<td>&lt; 1</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;6+ / Mozilla</th>
+
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>2</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;4-</th>
+<td>18</td>
+
+<td>10</td>
+<td>4</td>
+<td>1</td>
+<td>&lt; 1</td>
+</tr>
+
+<tr>
+<th>Opera</th>
+<td>&lt; 1</td>
+
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>1</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+<h2>Styled Versions</h2>
+
+<p>All of the tables below use the exact same markup as the table above. The
+only change is to add a class to the <code>&lt;table&gt;</code> tag, such
+as: <code>&lt;table class="Design1"&gt;</code>. Obviously, on a real Web
+site, you would want to come up with more meaningful class names :-).</p>
+
+
+<h3>Design 1</h3>
+
+<table cellspacing='0' class="Design1">
+
+<thead>
+<tr>
+<th class="Corner">Browser</th>
+<th>2000</th>
+<th>2001</th>
+<th>2002</th>
+<th>2003</th>
+<th>2004</th>
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<th>MSIE 6.x</th>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>23</td>
+<td>52</td>
+<td>74</td>
+</tr>
+
+<tr>
+
+<th>MSIE 5.x</th>
+<td>45</td>
+<td>72</td>
+<td>64</td>
+<td>39</td>
+<td>18</td>
+</tr>
+
+<tr>
+<th>MSIE 4.x</th>
+
+<td>30</td>
+<td>12</td>
+<td>4</td>
+<td>1</td>
+<td>&lt; 1</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;6+ / Mozilla</th>
+
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>2</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;4-</th>
+<td>18</td>
+
+<td>10</td>
+<td>4</td>
+<td>1</td>
+<td>&lt; 1</td>
+</tr>
+
+<tr>
+<th>Opera</th>
+<td>&lt; 1</td>
+
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>1</td>
+</tr>
+</tbody>
+
+</table>
+
+
+<h3>Design 2</h3>
+
+<table cellspacing='0' class="Design2">
+
+<thead>
+<tr>
+<th class="Corner">Browser</th>
+<th>2000</th>
+<th>2001</th>
+<th>2002</th>
+<th>2003</th>
+
+<th>2004</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th>MSIE 6.x</th>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>23</td>
+<td>52</td>
+<td>74</td>
+
+</tr>
+
+<tr>
+<th>MSIE 5.x</th>
+<td>45</td>
+<td>72</td>
+<td>64</td>
+<td>39</td>
+<td>18</td>
+</tr>
+
+<tr>
+<th>MSIE 4.x</th>
+<td>30</td>
+<td>12</td>
+<td>4</td>
+<td>1</td>
+<td>&lt; 1</td>
+</tr>
+
+<tr>
+
+<th>Netscape&nbsp;6+ / Mozilla</th>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>2</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;4-</th>
+
+<td>18</td>
+<td>10</td>
+<td>4</td>
+<td>1</td>
+<td>&lt; 1</td>
+</tr>
+
+<tr>
+<th>Opera</th>
+<td>&lt; 1</td>
+
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>1</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+<h3>Design 3</h3>
+
+<table cellspacing='0' class="Design3">
+
+<thead>
+<tr>
+<th class="Corner">Browser</th>
+<th>2000</th>
+<th>2001</th>
+<th>2002</th>
+
+<th>2003</th>
+<th>2004</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th>MSIE 6.x</th>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>23</td>
+<td>52</td>
+
+<td>74</td>
+</tr>
+
+<tr>
+<th>MSIE 5.x</th>
+<td>45</td>
+<td>72</td>
+<td>64</td>
+<td>39</td>
+<td>18</td>
+
+</tr>
+
+<tr>
+<th>MSIE 4.x</th>
+<td>30</td>
+<td>12</td>
+<td>4</td>
+<td>1</td>
+<td>&lt; 1</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;6+ / Mozilla</th>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>2</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;4-</th>
+<td>18</td>
+<td>10</td>
+<td>4</td>
+<td>1</td>
+<td>&lt; 1</td>
+</tr>
+
+<tr>
+<th>Opera</th>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>1</td>
+
+</tr>
+</tbody>
+
+</table>
+
+
+
+
+<h3>Design 4</h3>
+
+<table cellspacing='0' class="Design4">
+
+<thead>
+<tr>
+<th class="Corner">Browser</th>
+
+<th>2000</th>
+<th>2001</th>
+<th>2002</th>
+<th>2003</th>
+<th>2004</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th>MSIE 6.x</th>
+
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>23</td>
+<td>52</td>
+<td>74</td>
+</tr>
+
+<tr>
+<th>MSIE 5.x</th>
+<td>45</td>
+<td>72</td>
+
+<td>64</td>
+<td>39</td>
+<td>18</td>
+</tr>
+
+<tr>
+<th>MSIE 4.x</th>
+<td>30</td>
+<td>12</td>
+<td>4</td>
+
+<td>1</td>
+<td>&lt; 1</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;6+ / Mozilla</th>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+
+<td>2</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;4-</th>
+<td>18</td>
+<td>10</td>
+<td>4</td>
+<td>1</td>
+<td>&lt; 1</td>
+
+</tr>
+
+<tr>
+<th>Opera</th>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+
+<td>1</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+
+<h3>Design 5</h3>
+
+<table cellspacing='0' class="Design5">
+
+<thead>
+<tr>
+
+<th class="Corner">Browser</th>
+<th>2000</th>
+<th>2001</th>
+<th>2002</th>
+<th>2003</th>
+<th>2004</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+
+<th>MSIE 6.x</th>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>23</td>
+<td>52</td>
+<td>74</td>
+</tr>
+
+<tr>
+<th>MSIE 5.x</th>
+<td>45</td>
+
+<td>72</td>
+<td>64</td>
+<td>39</td>
+<td>18</td>
+</tr>
+
+<tr>
+<th>MSIE 4.x</th>
+<td>30</td>
+<td>12</td>
+
+<td>4</td>
+<td>1</td>
+<td>&lt; 1</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;6+ / Mozilla</th>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&lt; 1</td>
+
+<td>&lt; 1</td>
+<td>2</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;4-</th>
+<td>18</td>
+<td>10</td>
+<td>4</td>
+
+<td>1</td>
+<td>&lt; 1</td>
+</tr>
+
+<tr>
+<th>Opera</th>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+
+<td>&lt; 1</td>
+<td>1</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+
+<h3>Design 6</h3>
+
+<p>The following table has a slight addition to the markup:
+
+<code>class="Odd"</code> is added to the each odd-numbered
+<code>&lt;tr&gt;</code> within the <code>&lt;tbody&gt;</code>, thus
+abstracting the odd rows to be styled.</p>
+
+<table cellspacing='0' class="Design6">
+
+<thead>
+<tr>
+<th class="Corner">Browser</th>
+<th>2000</th>
+
+<th>2001</th>
+<th>2002</th>
+<th>2003</th>
+<th>2004</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="Odd">
+<th>MSIE 6.x</th>
+<td>&mdash;</td>
+<td>&mdash;</td>
+
+<td>23</td>
+<td>52</td>
+<td>74</td>
+</tr>
+
+<tr>
+<th>MSIE 5.x</th>
+<td>45</td>
+<td>72</td>
+<td>64</td>
+
+<td>39</td>
+<td>18</td>
+</tr>
+
+<tr class="Odd">
+<th>MSIE 4.x</th>
+<td>30</td>
+<td>12</td>
+<td>4</td>
+<td>1</td>
+
+<td>&lt; 1</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;6+ / Mozilla</th>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+
+<td>2</td>
+</tr>
+
+<tr class="Odd">
+<th>Netscape&nbsp;4-</th>
+<td>18</td>
+<td>10</td>
+<td>4</td>
+<td>1</td>
+<td>&lt; 1</td>
+
+</tr>
+
+<tr>
+<th>Opera</th>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+<td>&lt; 1</td>
+
+<td>1</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+
+<h3>Design 7</h3>
+
+<p>This table has the opposite treatment of Design 6: odd columns are
+abstracted by adding <code>&lt;class="Odd"&gt;</code> on each odd <code>&lt;td&gt;</code>.</p>
+
+<table cellspacing='0' class="Design7">
+
+<thead>
+<tr>
+<th class="Corner">Browser</th>
+<th class="Odd">2000</th>
+<th>2001</th>
+<th class="Odd">2002</th>
+<th>2003</th>
+<th class="Odd">2004</th>
+
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th>MSIE 6.x</th>
+<td class="Odd">&mdash;</td>
+<td>&mdash;</td>
+<td class="Odd">23</td>
+<td>52</td>
+<td class="Odd">74</td>
+</tr>
+
+<tr>
+<th>MSIE 5.x</th>
+<td class="Odd">45</td>
+<td>72</td>
+<td class="Odd">64</td>
+<td>39</td>
+<td class="Odd">18</td>
+</tr>
+
+<tr>
+<th>MSIE 4.x</th>
+
+<td class="Odd">30</td>
+<td>12</td>
+<td class="Odd">4</td>
+<td>1</td>
+<td class="Odd">&lt; 1</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;6+ / Mozilla</th>
+
+<td class="Odd">&mdash;</td>
+<td>&mdash;</td>
+<td class="Odd">&lt; 1</td>
+<td>&lt; 1</td>
+<td class="Odd">2</td>
+</tr>
+
+<tr>
+<th>Netscape&nbsp;4-</th>
+<td class="Odd">18</td>
+
+<td>10</td>
+<td class="Odd">4</td>
+<td>1</td>
+<td class="Odd">&lt; 1</td>
+</tr>
+
+<tr>
+<th>Opera</th>
+<td class="Odd">&lt; 1</td>
+
+<td>&lt; 1</td>
+<td class="Odd">&lt; 1</td>
+<td>&lt; 1</td>
+<td class="Odd">1</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+
+</body>
+
+</html>
